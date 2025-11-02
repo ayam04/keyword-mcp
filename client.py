@@ -10,11 +10,7 @@ async def test_search():
             
             result = await session.call_tool(
                 "search_keyword",
-                arguments={
-                    "file_path": "test.py",
-                    "keyword": "def",
-                    "case_sensitive": False
-                }
+                arguments={"file_path": "requirements.txt","keyword": "fastmcp","case_sensitive": False}
             )
             print(f"Result: {result.content[0].text}")
 
